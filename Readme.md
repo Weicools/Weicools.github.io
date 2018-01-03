@@ -1,4 +1,4 @@
-# EstHome
+## Weicool's Home
 
 My HomePage Theme Based on [CeeHome](https://github.com/Cee/CeeHome)
 
