@@ -4,13 +4,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1" />
     <title>Weicool's Aboutpage</title>
-    <link href="./main_about.css" rel="stylesheet" media="all" />
+    <link href="https://cdn.jsdelivr.net/gh/weicools/weicools.github.io/main_about.css" rel="stylesheet" media="all" />
   </head>
 
   <body class="is-loading">
     <canvas id="sakura"></canvas>
 
-    <script src="./common-min_about.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/weicools/weicools.github.io/common-min_about.js"></script>
 
     <script>
       if ("addEventListener" in window) {
@@ -121,10 +121,8 @@
     </script>
 
     <script id="sakura_point_fsh" type="x-shader/x_fragment">
-      #ifdef GL_ES
       //precision mediump float;
       precision highp float;
-      #endif
 
       uniform vec3 uDOF;  //x:focus distance, y:focus radius, z:max radius
       uniform vec3 uFade; //x:start distance, y:half distance, z:near fade start
@@ -209,10 +207,8 @@
     </script>
 
     <script id="bg_fsh" type="x-shader/x_fragment">
-      #ifdef GL_ES
       //precision mediump float;
       precision highp float;
-      #endif
 
       uniform vec2 uTimes;
 
@@ -230,10 +226,8 @@
     </script>
 
     <script id="fx_brightbuf_fsh" type="x-shader/x_fragment">
-      #ifdef GL_ES
       //precision mediump float;
       precision highp float;
-      #endif
       uniform sampler2D uSrc;
       uniform vec2 uDelta;
 
@@ -247,10 +241,8 @@
     </script>
 
     <script id="fx_dirblur_r4_fsh" type="x-shader/x_fragment">
-      #ifdef GL_ES
       //precision mediump float;
       precision highp float;
-      #endif
       uniform sampler2D uSrc;
       uniform vec2 uDelta;
       uniform vec4 uBlurDir; //dir(x, y), stride(z, w)
@@ -270,10 +262,8 @@
 
     <!-- effect fragment shader template -->
     <script id="fx_common_fsh" type="x-shader/x_fragment">
-      #ifdef GL_ES
       //precision mediump float;
       precision highp float;
-      #endif
       uniform sampler2D uSrc;
       uniform vec2 uDelta;
 
@@ -299,10 +289,8 @@
     </script>
 
     <script id="pp_final_fsh" type="x-shader/x_fragment">
-      #ifdef GL_ES
       //precision mediump float;
       precision highp float;
-      #endif
       uniform sampler2D uSrc;
       uniform sampler2D uBloom;
       uniform vec2 uDelta;
